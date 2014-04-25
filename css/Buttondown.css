@@ -64,8 +64,11 @@ div#header, header
 div#TOC, nav#TOC
     {
     /* Put border on bottom to separate it from body. */
-    border-bottom: 1px solid #aaa;
+    border: 1px solid #aaa;
     margin-bottom: 0.5em;
+	float: right;
+	background-color:white;
+	padding-right:10px;
     }
  
 @media print
@@ -484,6 +487,7 @@ strong
 	
 blockquote 
 	{
+
 	border-left: 4px solid #dddddd;
 	background-color:#FFFFCC;
 	padding: 0 15px;
@@ -507,15 +511,33 @@ bt
 	margin-bottom: 0.5em;
 	display:block;
 	}
- 
+	
+	
+
+#foot
+{
+border-top: 2px solid #aaa;
+padding: 20px;
+margin: 0;
+text-align:center;
+
+font-size: 12px;
+position: relative;
+}
+
+
+
+	
  body	
 	 {
 	 line-height: 1.4;
 	 background:whitesmoke;
-	 width:950px;
 	 text-align: justify;
 	 display:block;
-	
+	 padding-top: 10;
+	 padding-left:100px;
+	 padding-right:100px;
+	 padding-bottom:20px;
 	｝
 
 	
