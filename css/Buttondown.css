@@ -517,7 +517,9 @@ bt
 #foot
 {
 border-top: 2px solid #aaa;
-padding: 20px;
+padding-top: 10px;
+padding-left:0;
+padding-bottom:20px;
 margin: 0;
 text-align:center;
 
