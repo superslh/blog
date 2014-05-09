@@ -9,27 +9,6 @@
   <link rel="stylesheet" href="../css/Buttondown.css" type="text/css" />
 </head>
 <body>
-<div id="TOC">
-<ul>
-<li><a href="#标题">标题</a></li>
-<li><a href="#引用-blockquote">引用 blockquote</a></li>
-<li><a href="#列表环境">列表环境</a><ul>
-<li><a href="#pandoc扩展">pandoc扩展</a></li>
-<li><a href="#pandoc扩展-1">pandoc扩展</a></li>
-</ul></li>
-<li><a href="#代码">代码</a></li>
-<li><a href="#注释">注释</a></li>
-<li><a href="#衔接">衔接</a></li>
-<li><a href="#图片">图片</a></li>
-<li><a href="#分割线">分割线</a></li>
-<li><a href="#表格pandoc扩展">表格（pandoc扩展）</a></li>
-<li><a href="#输出">输出</a></li>
-<li><a href="#定义环境">定义环境</a></li>
-<li><a href="#上标下标">上标下标</a></li>
-<li><a href="#pandoc幻灯片">Pandoc幻灯片</a></li>
-<li><a href="#头文件脚文件以及js引用">头文件、脚文件以及js引用</a></li>
-</ul>
-</div>
 <h1 id="标题">标题</h1>
 <pre><code>标题1    或者   #标题1
 ======
@@ -346,12 +325,38 @@ Table: Here&#39;s the caption. It, too, may span multiple lines.</code></pre></l
 <pre><code>pandoc slides.md -o slides.html -t dzslides -s</code></pre>
 <p>内置Slidy</p>
 <pre><code> pandoc slides.md -o slides.html -t slidy -s</code></pre>
+<h1 id="多个文件输出为一个htmlepub">多个文件输出为一个html【epub】</h1>
+<pre><code>pandoc 1.md 2.md -o  a.html</code></pre>
+<p>参考了<a href="http://www.imwsh.net/2014/01/use-pandoc-kindlegen-make-beautiful-ebooks/">用Pandoc和KindleGen简便制作精美的EPUB、MOBI、PDF电子书</a></p>
+<p>tips：我准备做的blog就可以做一个links文件把所有的link信息都放进去，其他的文件再编译的时候加入这个links目录就可以了。哈哈，bingo</p>
 <h1 id="头文件脚文件以及js引用">头文件、脚文件以及js引用</h1>
 <pre><code>-H FILE, --include-in-header=FILE</code></pre>
 <p>Include contents of FILE, verbatim, at the end of the header. This can be used, for example, to include special CSS or javascript in HTML documents. This option can be used repeatedly to include multiple files in the header. They will be included in the order specified. Implies --standalone.</p>
 <pre><code>-B FILE, --include-before-body=FILE</code></pre>
 Include contents of FILE, verbatim, at the beginning of the document body (e.g. after the
 <body> 
-tag in HTML, or the
+<p>tag in HTML, or the <code>\begin{document}</code> command in LaTeX). This can be used to include navigation bars or banners in HTML documents. This option can be used repeatedly to include multiple files. They will be included in the order specified. Implies --standalone.</p>
+<pre><code>-A FILE, --include-after-body=FILE</code></pre>
+Include contents of FILE, verbatim, at the end of the document body (before the
+</body> 
+<p>tag in HTML, or the <code>\end{document}</code> command in LaTeX). This option can be be used repeatedly to include multiple files. They will be included in the order specified. Implies --standalone.</p>
+<p>参考：[pandoc官网]</p>
+<p>footer 使用 #4a4849作为底色。</p>
+<p>[pandoc官网]：http://johnmacfarlane.net/pandoc/README.html</p>
+<div id="foot">
+
+
+<p align="left">本站说明</br>
+--------------------------------------------------------------------------------</br>
+本站所有源文件都是由Pandoc's MarkDown完成，对其作者
+<a href="http://johnmacfarlane.net/pandoc/demo/example9/pandocs-markdown.html" target=_blank>John MacFarlane]</a>和
+<a href="https://daringfireball.net/projects/markdown/" target=_blank>John Grube</a>表示真诚的感谢！
+本站的静态page页面托管在
+<a href="https://www.github.com" target=_blank>GitHub</a>，对其提供的page服务实在是感激。</br>
+本站所有内容都来自于互联网上获得的资料，并经过<a href="/blog/resume.html">@songliheng</a>精心收集、整理汇编而成，欢迎指正。但是由于编辑过程中可能出现疏漏，所以不对资料的真实性做任何保证，阅读时请仔细甄别！</br>
+我个人对色彩感觉较差，虽对css略知一二，但实在配不出好看的页面，所以也欢迎页面美化的建议。</br>
+我的邮箱: songliheng_live_com
+</p>
+</div>
 </body>
 </html>
